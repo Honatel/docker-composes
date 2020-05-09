@@ -19,3 +19,6 @@ mosquitto_data
 portainer_data
 mysql_data
 logs
+mongo/client-connections/
+mssql/mssql_data/
+

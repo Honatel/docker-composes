@@ -6,10 +6,10 @@ services:
     container_name: redis
     volumes:
       - ./redis_data:/data
-    networks:
-      - net
+#    networks:
+#      - net
     ports:
       - 6379:6379
     command: ["redis-server", "--appendonly", "yes"]
-networks:
-  net:
+#networks:
+#  net:
