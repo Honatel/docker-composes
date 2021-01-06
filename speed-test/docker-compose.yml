@@ -3,7 +3,7 @@ services:
   speedtest:
     container_name: speedtest
     image: roest/docker-speedtest-analyser
-    restart: unless-stopped
+    restart: always
     network_mode: bridge
     volumes:
       - ./data:/var/www/html/data
