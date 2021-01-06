@@ -12,7 +12,7 @@ services:
             - PGID=
             - PUID=
             - OOKLA_EULA_GDPR=true
-            - AUTH=true
+            #- AUTH=true
         logging:
             driver: "json-file"
             options:
