@@ -2,7 +2,7 @@ version: '3'
 services:
   speedtest:
     container_name: speedtest
-    image: roest/docker-speedtest-analyser
+    image: jfollmann/raspberry-speedtest-analyser
     restart: unless-stopped
     network_mode: bridge
     volumes:
