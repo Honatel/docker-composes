@@ -21,4 +21,4 @@ mysql_data
 logs
 mongo/client-connections/
 mssql/mssql_data/
-
+speed-test/data/
