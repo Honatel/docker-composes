@@ -22,3 +22,4 @@ logs
 mongo/client-connections/
 mssql/mssql_data/
 postgres/data
+speed-test/data/

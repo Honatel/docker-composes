@@ -1,14 +1,21 @@
-version: '3'
+version: '3.3'
 services:
-  speedtest:
-    container_name: speedtest
-    image: roest/docker-speedtest-analyser
-    restart: always
-    network_mode: bridge
-    volumes:
-      - ./data:/var/www/html/data
-    ports:
-      - 8080:80
-      - 4343:443
-    environment:
-      - CRONJOB_ITERATION=30
+    speedtest:
+        container_name: speedtest
+        image: henrywhitaker3/speedtest-tracker:latest-arm
+        ports:
+            - 8080:80
+        volumes:
+            - ./data:/config
+        environment:
+            - TZ=
+            - PGID=
+            - PUID=
+            - OOKLA_EULA_GDPR=true
+            #- AUTH=true
+        logging:
+            driver: "json-file"
+            options:
+                max-file: "10"
+                max-size: "200k"
+        restart: unless-stopped
