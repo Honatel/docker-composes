@@ -24,3 +24,4 @@ mssql/mssql_data/
 postgres/data
 speed-test/data/
 jmeter/tests/trivial/report
+jmeter/tests/trivial/jmeter.log
