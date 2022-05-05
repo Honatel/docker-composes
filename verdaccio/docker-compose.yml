@@ -1,10 +1,13 @@
-verdaccio:
-  image: verdaccio/verdaccio:latest
-  restart: always
-  container_name: verdaccio
-  volumes:
-    - ./data/conf:/verdaccio/conf
-    - ./data/storage:/verdaccio/storage
-    - ./data/plugins:/verdaccio/plugins
-  ports:
-    - 4873:4873
+version: '3'
+
+services:
+  verdaccio:
+    image: verdaccio/verdaccio:latest
+    restart: always
+    container_name: verdaccio
+    volumes:
+      - ./data/conf:/verdaccio/conf
+      - ./data/storage:/verdaccio/storage
+      - ./data/plugins:/verdaccio/plugins
+    ports:
+      - 4873:4873

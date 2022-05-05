@@ -1,4 +1,7 @@
-portainer:
+version: '3'
+
+services:
+  portainer:
     image: portainer/portainer
     container_name: portainer
     ports:

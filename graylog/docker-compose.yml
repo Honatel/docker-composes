@@ -1,12 +1,14 @@
-elasticsearch:
+version: '3'
+
+services:
+  elasticsearch:
     container_name: elasticsearch
     restart: always
     image: docker.elastic.co/elasticsearch/elasticsearch:6.5.1
     environment:
         - http.host=0.0.0.0
         - xpack.security.enabled=false
-
-graylog:
+  graylog:
     container_name: graylog
     restart: always
     image: graylog/graylog:2.5

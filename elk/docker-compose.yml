@@ -1,4 +1,7 @@
-elk:
+version: '2'
+
+services:
+  elk:
     container_name: elk
     image: sebp/elk
     ports:

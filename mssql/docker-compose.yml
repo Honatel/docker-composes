@@ -1,11 +1,14 @@
-mysql:
-  image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
-  restart: always
-  container_name: mssql
-  volumes:
-    - ./mssql_data:/var/opt/mssql
-  ports:
-    - 1433:1433
-  environment:
-    - ACCEPT_EULA=Y
-    - SA_PASSWORD=012345678@totvs123
+version: '3'
+
+services:
+  mysql:
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    restart: always
+    container_name: mssql
+    volumes:
+      - ./mssql_data:/var/opt/mssql
+    ports:
+      - 1433:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=012345678@totvs123
