@@ -1,9 +1,0 @@
-version: "3"
-services:
-  logger:
-    image: chentex/random-logger:latest
-    restart: always
-    logging:
-      driver: "gelf"
-      options:
-        gelf-address: "udp://localhost:12201"
